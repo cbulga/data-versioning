@@ -1,0 +1,2 @@
+docker rm -f oracle-data-versioning
+docker run -d -it --name oracle-data-versioning -p 1521:1521 -e ORACLE_PASSWORD=passw0rd -e APP_USER=data_versioning -e APP_USER_PASSWORD=passw0rd -v %userprofile%/git_repo/data-versioning/docker/init_scripts:/container-entrypoint-initdb.d gvenzl/oracle-xe:21.3.0
